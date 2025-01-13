@@ -5,3 +5,13 @@ g++ -c factorial.cpp -o factorial.o
 g++ -o hello main.o hello.o factorial.o
 $ ./hello
 Hello World
+$ touch hello.cpp # simulate an edit to hello.cpp and only hello.cpp and hello gets recompiled
+$ make
+g++ -c hello.cpp -o hello.o
+g++ -o hello main.o hello.o factorial.o
+$ touch hello.cpp factorial.cpp # simulate an edito to hello.cpp and factorial.cpp
+$ make
+g++ -c hello.cpp -o hello.o
+g++ -c factorial.cpp -o factorial.o
+g++ -o hello main.o hello.o factorial.o
+$ 
