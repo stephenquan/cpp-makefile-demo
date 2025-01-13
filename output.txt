@@ -1,0 +1,7 @@
+$ make
+g++ -c main.cpp -o main.o
+g++ -c hello.cpp -o hello.o
+g++ -c factorial.cpp -o factorial.o
+g++ -o hello main.o hello.o factorial.o
+$ ./hello
+Hello World
